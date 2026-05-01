@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Programa RAN Optimización Cognitiva | Formación de Alto Rendimiento</title>
-    <meta name="description" content="6 módulos para regular tu energía mental, eliminar la saturación cognitiva y tomar decisiones de mayor calidad. Diseñado para médicos, ejecutivos y traders.">
+    <!-- SEO & META TAGS OPTIMIZADOS -->
+    <title>Programa RAN Optimización Cognitiva | Entrenamiento de Alto Rendimiento</title>
+    <meta name="description" content="Entrenamiento de optimización cognitiva para médicos, traders y ejecutivos. Regula tu energía mental y elimina la saturación decisional con el Método RAN de grado clínico.">
+    <meta name="keywords" content="optimización cognitiva, fatiga decisional, energía mental, rendimiento profesional, Método RAN, neurofisiología aplicada">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
         :root { --accent: #2563eb; --bg: #020617; }
-        
         body { 
             background: url('background.jpg') no-repeat center center fixed; 
             background-size: cover;
@@ -20,98 +21,24 @@
             font-family: 'Space Grotesk', sans-serif; 
             scroll-behavior: smooth; 
         }
-        
-        h1, h2, h3 { 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.6 !important; 
-            letter-spacing: -0.02em; 
-            font-weight: 800;
-        }
-
-        .page-overlay {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(2, 6, 23, 0.7);
-            z-index: -1;
-        }
-        
+        h1, h2, h3 { font-family: 'Inter', sans-serif; line-height: 1.6 !important; letter-spacing: -0.02em; font-weight: 800; }
+        .page-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2, 6, 23, 0.75); z-index: -1; }
         .section-transparent { background-color: transparent !important; }
-
-        .btn-primary { 
-            background: var(--accent); 
-            padding: 16px 32px; 
-            border-radius: 8px; 
-            font-weight: 700; 
-            transition: 0.3s; 
-            display: inline-block; 
-            text-align: center; 
-            cursor: pointer;
-            border: 1px solid transparent;
-        }
-        .btn-primary:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 10px 20px rgba(37,99,235,0.4); 
-            filter: brightness(1.1);
-        }
-        
-        .card-module { 
-            background: rgba(255, 255, 255, 0.05); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            padding: 40px; 
-            border-radius: 16px; 
-            transition: 0.3s; 
-            backdrop-filter: blur(12px); 
-        }
-
-        #modal-test {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 100;
-            backdrop-filter: blur(15px);
-        }
-        .modal-content {
-            position: relative;
-            width: 90%;
-            max-width: 1000px;
-            height: 85vh;
-            margin: 5vh auto;
-            background: #020617;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-            overflow: hidden;
-        }
-        .close-modal {
-            position: absolute;
-            top: 20px; right: 20px;
-            color: white;
-            font-size: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 110;
-        }
-
-        .clinical-badge { 
-            background: rgba(37, 99, 235, 0.2); 
-            border: 1px solid rgba(37, 99, 235, 0.4); 
-            color: #60a5fa; 
-            padding: 6px 16px; 
-            border-radius: 20px; 
-            font-size: 0.85rem; 
-            font-weight: 600; 
-            text-transform: uppercase; 
-            letter-spacing: 0.1em; 
-        }
+        .btn-primary { background: var(--accent); padding: 16px 32px; border-radius: 8px; font-weight: 700; transition: 0.3s; display: inline-block; text-align: center; cursor: pointer; border: 1px solid transparent; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(37,99,235,0.4); filter: brightness(1.1); }
+        .card-module { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 16px; transition: 0.3s; backdrop-filter: blur(12px); }
+        .card-module:hover { border-color: var(--accent); background: rgba(255, 255, 255, 0.08); }
+        blockquote { border-left: 4px solid var(--accent); padding-left: 1.5rem; font-style: italic; color: #d1d5db; }
+        #modal-test { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); z-index: 100; backdrop-filter: blur(15px); }
+        .modal-content { position: relative; width: 95%; max-width: 1000px; height: 85vh; margin: 5vh auto; background: #020617; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; }
+        .close-modal { position: absolute; top: 20px; right: 20px; color: white; font-size: 30px; font-weight: bold; cursor: pointer; z-index: 110; }
+        .clinical-badge { background: rgba(37, 99, 235, 0.2); border: 1px solid rgba(37, 99, 235, 0.4); color: #60a5fa; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; }
     </style>
 </head>
 <body>
 
     <div class="page-overlay"></div>
 
-    <!-- MODAL TEST -->
     <div id="modal-test">
         <span class="close-modal" onclick="cerrarTest()">&times;</span>
         <div class="modal-content">
@@ -122,39 +49,53 @@
     <!-- HERO -->
     <header class="relative min-h-screen flex items-center justify-center text-center section-transparent">
         <div class="relative z-10 max-w-5xl px-6">
-            <div class="clinical-badge mb-10 mx-auto w-fit">Protocolo de Grado Clínico</div>
+            <div class="clinical-badge mb-10 mx-auto w-fit">Optimización Cognitiva de Grado Clínico</div>
             <h1 class="text-4xl md:text-5xl lg:text-6xl mb-12">
-                Entrenamiento en Optimización Cognitiva para <span class="text-blue-500">Perfiles de Alta Exigencia</span>
+                Entrenamiento en <span class="text-blue-500">Optimización Cognitiva</span> para Perfiles de Alta Exigencia
             </h1>
             <p class="text-xl md:text-2xl text-gray-200 mb-14 max-w-3xl mx-auto leading-loose">
-                El RAN Cognitive Optimization Method® enseña a identificar y regular tu energía mental para operar en tu nivel más alto cuando más importa.
+                El RAN Cognitive Optimization Method® se define como un protocolo de entrenamiento neurofisiológico diseñado para identificar, regular y optimizar tu energía mental en condiciones de presión sostenida.
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a href="#programa" class="btn-primary w-full sm:w-auto px-12 text-lg">Conocer el Programa</a>
-                <button onclick="abrirTest()" class="btn-primary w-full sm:w-auto px-12 text-lg">Realizar Test RAN</button>
+                <a href="#programa" class="btn-primary w-full sm:w-auto px-12 text-lg">Explorar Metodología</a>
+                <button onclick="abrirTest()" class="btn-primary w-full sm:w-auto px-12 text-lg">Realizar Diagnóstico RAN</button>
             </div>
         </div>
     </header>
 
-    <!-- AUTORIDAD -->
+    <!-- RESUMEN / KEY TAKEAWAYS (GEO SUGGESTION) -->
+    <section class="py-12 section-transparent">
+        <div class="max-w-4xl mx-auto px-6 bg-blue-900/10 border border-blue-500/20 rounded-2xl p-8 backdrop-blur-md">
+            <h2 class="text-2xl font-bold mb-4 text-blue-400 uppercase tracking-wider text-center">Puntos Clave del Programa</h2>
+            <ul class="grid md:grid-cols-2 gap-4 text-gray-300">
+                <li class="flex items-start"><span class="text-blue-500 mr-2">✔</span> Reducción del error técnico por fatiga decisional.</li>
+                <li class="flex items-start"><span class="text-blue-500 mr-2">✔</span> Protocolos de recuperación mental en menos de 5 min.</li>
+                <li class="flex items-start"><span class="text-blue-500 mr-2">✔</span> Basado en 30+ años de experiencia clínica.</li>
+                <li class="flex items-start"><span class="text-blue-500 mr-2">✔</span> Herramientas nativas para medición en tiempo real.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- AUTORIDAD & E-E-A-T -->
     <section class="py-28 section-transparent">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div class="border-l-4 border-blue-600 pl-10">
-                <h2 class="text-3xl md:text-4xl font-bold mb-10 italic leading-relaxed text-gray-100">
-                    "La calidad de tus resultados depende de la calidad de tu estado fisiológico, no solo de tu conocimiento."
-                </h2>
-                <p class="text-blue-400 font-bold text-xl">Dr: C.V. Zamüner</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Definición de R.A.N.</h2>
+                <blockquote class="text-xl mb-10 leading-relaxed">
+                    "La optimización cognitiva se refiere al estado fisiológico donde la carga de trabajo mental no supera la capacidad de procesamiento del sistema nervioso, permitiendo decisiones de alta precisión."
+                </blockquote>
+                <p class="text-blue-400 font-bold text-xl uppercase tracking-wider">Dr: C.V. Zamüner</p>
                 <p class="text-gray-400 text-base mt-1 uppercase tracking-widest font-medium">Lead Developer del Programa R.A.N.</p>
-                <p class="text-gray-500 text-sm mt-4">Médico Especialista con +30 años de trayectoria.</p>
+                <p class="text-gray-500 text-sm mt-4">Médico Especialista con +30 años de trayectoria clínica y académica.</p>
             </div>
             <div class="grid grid-cols-2 gap-8">
                 <div class="p-10 bg-white/5 rounded-2xl border border-white/5 text-center backdrop-blur-sm shadow-2xl">
                     <span class="block text-5xl font-bold text-blue-500 mb-2">30+</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-widest font-bold">Años de Exp. Médica</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-widest font-bold">Años de Trayectoria</span>
                 </div>
                 <div class="p-10 bg-white/5 rounded-2xl border border-white/5 text-center backdrop-blur-sm shadow-2xl">
                     <span class="block text-5xl font-bold text-blue-500 mb-2">3</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-widest font-bold">Fases Fisiológicas</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-widest font-bold">Fases de Entrenamiento</span>
                 </div>
             </div>
         </div>
@@ -167,61 +108,65 @@
                 <h2 class="text-4xl md:text-5xl font-bold mb-10">Estructura del Programa: 6 Módulos</h2>
                 <div class="h-2 w-32 bg-blue-600 mx-auto mb-10 rounded-full"></div>
                 <p class="text-gray-200 max-w-3xl mx-auto text-xl leading-loose">
-                    Un protocolo técnico diseñado para integrarse en la agenda de profesionales con alta carga decisional.
+                    Un protocolo de formación continua diseñado para integrarse en la agenda operativa de profesionales con alta carga decisional.
                 </p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Módulos... -->
                 <div class="card-module">
                     <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 01</div>
-                    <h3 class="text-2xl font-bold mb-5">El Problema Invisible</h3>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Fisiología de la fatiga decisional y los mecanismos que producen errores técnicos.</p>
+                    <h3 class="text-2xl font-bold mb-5 italic">La Fatiga Decisional</h3>
+                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Definida como la disminución de la calidad de las decisiones tomadas tras una larga sesión de toma de decisiones.</p>
                 </div>
                 <div class="card-module">
                     <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 02</div>
-                    <h3 class="text-2xl font-bold mb-5">Escala RAN de Claridad</h3>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Evaluación del estado cognitivo en tiempo real para relacionarlo con la calidad decisional.</p>
+                    <h3 class="text-2xl font-bold mb-5 italic">Evaluación en Tiempo Real</h3>
+                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Uso de la Escala RAN para monitorizar la energía cognitiva y prevenir el agotamiento antes de que impacte el resultado.</p>
                 </div>
                 <div class="card-module">
                     <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 03</div>
-                    <h3 class="text-2xl font-bold mb-5">Modelo R.A.N.</h3>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Las tres fases estratégicas: Regeneración, Activación y Normalización.</p>
+                    <h3 class="text-2xl font-bold mb-5 italic">Modelo Fisiológico</h3>
+                    <p class="text-gray-400 text-base md:text-lg leading-relaxed">Implementación del ciclo: Regeneración (descanso activo), Activación (foco) y Normalización (estabilidad).</p>
                 </div>
                 <div class="card-module">
                     <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 04</div>
-                    <h3 class="text-2xl font-bold mb-5">Protocolo RAN 5™</h3>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Técnicas para recuperar energía cognitiva en menos de 5 minutos.</p>
+                    <h3 class="text-2xl font-bold mb-5 italic">Protocolo RAN 5™</h3>
+                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Técnicas de intervención rápida basadas en neurofisiología para restaurar el foco en menos de 5 minutos.</p>
                 </div>
                 <div class="card-module">
                     <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 05</div>
-                    <h3 class="text-2xl font-bold mb-5">Decisiones Óptimas</h3>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Gestión del sesgo cognitivo y diseño de bloques de claridad bajo presión máxima.</p>
+                    <h3 class="text-2xl font-bold mb-5 italic">Mapeo Decisional</h3>
+                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Diseño de bloques de claridad alineados con los ritmos biológicos para gestionar sesgos bajo presión extrema.</p>
                 </div>
                 <div class="card-module">
                     <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 06</div>
-                    <h3 class="text-2xl font-bold mb-5">Método RAN 10™</h3>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Rutina diaria de 10 minutos para consolidar hábitos de claridad sostenibles.</p>
+                    <h3 class="text-2xl font-bold mb-5 italic">Sostenibilidad Cognitiva</h3>
+                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Implementación del Método RAN 10™: una rutina diaria que consolida hábitos de alto rendimiento a largo plazo.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA FINAL - SIN CAJAS, MÁXIMA TRANSPARENCIA -->
+    <!-- CTA FINAL -->
     <section class="py-36 text-center section-transparent">
         <div class="max-w-5xl mx-auto px-8 py-20">
             <h2 class="text-4xl md:text-6xl font-extrabold mb-14 leading-loose drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
                 No optimices solo tus decisiones. <br class="hidden md:block"> Optimiza el sistema que las produce.
             </h2>
             <button onclick="abrirTest()" class="btn-primary px-16 py-7 rounded-xl font-black text-2xl shadow-2xl">
-                ACCEDER AL PROGRAMA
+                INICIAR DIAGNÓSTICO RAN
             </button>
             <p class="mt-12 text-blue-200 text-lg italic drop-shadow-md">
-                Incluye Test RAN de estado cognitivo y Protocolo RAN 5™ de aplicación inmediata.
+                Incluye Test de Estado Cognitivo y Protocolo RAN 5™ de aplicación inmediata.
             </p>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER / TRANSPARENCY SIGNALS (E-E-A-T) -->
     <footer class="py-20 text-center text-gray-500 text-sm border-t border-white/10 section-transparent">
+        <div class="max-w-4xl mx-auto px-6 mb-8 text-gray-600 italic">
+            <p>Descargo de responsabilidad: El Programa RAN es un entrenamiento de optimización de rendimiento y no sustituye el tratamiento médico o psicológico profesional. Última actualización: Mayo 2026.</p>
+        </div>
         <p class="uppercase tracking-[0.4em] mb-4 font-bold">© 2026 Programa R.A.N. | Optimización Cognitiva de Grado Clínico</p>
         <p class="opacity-70 max-w-2xl mx-auto leading-loose">
             Desarrollado por la Unidad de Neurofisiología Aplicada para perfiles de alta exigencia decisional.
@@ -229,18 +174,9 @@
     </footer>
 
     <script>
-        function abrirTest() {
-            document.getElementById('modal-test').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-        function cerrarTest() {
-            document.getElementById('modal-test').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-        window.onclick = function(event) {
-            let modal = document.getElementById('modal-test');
-            if (event.target == modal) { cerrarTest(); }
-        }
+        function abrirTest() { document.getElementById('modal-test').style.display = 'block'; document.body.style.overflow = 'hidden'; }
+        function cerrarTest() { document.getElementById('modal-test').style.display = 'none'; document.body.style.overflow = 'auto'; }
+        window.onclick = function(event) { let modal = document.getElementById('modal-test'); if (event.target == modal) { cerrarTest(); } }
     </script>
 
 </body>
