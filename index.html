@@ -36,8 +36,6 @@
             z-index: -1;
         }
         
-        .section-transparent { background: transparent; }
-
         .btn-primary { 
             background: var(--accent); 
             padding: 16px 32px; 
@@ -46,6 +44,7 @@
             transition: 0.3s; 
             display: inline-block; 
             text-align: center; 
+            cursor: pointer;
         }
         .btn-primary:hover { 
             transform: translateY(-2px); 
@@ -60,11 +59,38 @@
             transition: 0.3s; 
             backdrop-filter: blur(12px); 
         }
-        .card-module:hover { 
-            border-color: var(--accent); 
-            background: rgba(255, 255, 255, 0.08); 
+
+        /* ESTILOS DEL MODAL PARA EL TEST */
+        #modal-test {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 100;
+            backdrop-filter: blur(15px);
         }
-        
+        .modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            height: 85vh;
+            margin: 5vh auto;
+            background: #020617;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow: hidden;
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px; right: 20px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 110;
+        }
+
         .clinical-badge { 
             background: rgba(37, 99, 235, 0.2); 
             border: 1px solid rgba(37, 99, 235, 0.4); 
@@ -82,10 +108,18 @@
 
     <div class="page-overlay"></div>
 
+    <!-- MODAL DEL TEST (Incrustado) -->
+    <div id="modal-test">
+        <span class="close-modal" onclick="cerrarTest()">&times;</span>
+        <div class="modal-content">
+            <iframe src="https://crvzar1740.github.io/TEST-R.A.N.-/" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+
     <!-- HERO SECTION -->
     <header class="relative min-h-screen flex items-center justify-center text-center">
         <div class="relative z-10 max-w-5xl px-6">
-            <div class="clinical-badge mb-10 mx-auto w-fit shadow-lg shadow-blue-500/20">Protocolo de Grado Clínico</div>
+            <div class="clinical-badge mb-10 mx-auto w-fit">Protocolo de Grado Clínico</div>
             
             <h1 class="text-4xl md:text-5xl lg:text-6xl mb-12">
                 Entrenamiento en Optimización Cognitiva para <span class="text-blue-500">Perfiles de Alta Exigencia</span>
@@ -97,7 +131,7 @@
             
             <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <a href="#programa" class="btn-primary w-full sm:w-auto px-12 text-lg">Explorar el Programa</a>
-                <a href="https://bit.ly/test-ran" target="_blank" class="btn-primary bg-white/10 border border-white/20 w-full sm:w-auto px-12 text-lg">Realizar Test RAN</a>
+                <button onclick="abrirTest()" class="btn-primary bg-white/10 border border-white/20 w-full sm:w-auto px-12 text-lg">Realizar Test RAN</button>
             </div>
         </div>
     </header>
@@ -111,11 +145,11 @@
                 </h2>
                 <p class="text-blue-400 font-bold text-xl">Dr: C.V. Zamüner</p>
                 <p class="text-gray-400 text-base mt-1 uppercase tracking-widest font-medium">Lead Developer del Programa R.A.N.</p>
-                <p class="text-gray-500 text-sm mt-4">Médico Especialista con +30 años de trayectoria.</p>
+                <p class="text-gray-500 text-sm mt-4">Médico Especialista con +20 años de trayectoria.</p>
             </div>
             <div class="grid grid-cols-2 gap-8">
                 <div class="p-10 bg-white/5 rounded-2xl border border-white/5 text-center backdrop-blur-sm shadow-2xl">
-                    <span class="block text-5xl font-bold text-blue-500 mb-2">30+</span>
+                    <span class="block text-5xl font-bold text-blue-500 mb-2">20+</span>
                     <span class="text-xs text-gray-400 uppercase tracking-widest font-bold">Años de Exp. Médica</span>
                 </div>
                 <div class="p-10 bg-white/5 rounded-2xl border border-white/5 text-center backdrop-blur-sm shadow-2xl">
@@ -178,9 +212,9 @@
             <h2 class="text-4xl md:text-6xl font-extrabold mb-14 leading-loose">
                 No optimices solo tus decisiones. <br class="hidden md:block"> Optimiza el sistema que las produce.
             </h2>
-            <a href="https://bit.ly/test-ran" target="_blank" class="bg-blue-600 text-white px-16 py-7 rounded-xl font-black text-2xl hover:bg-blue-700 transition shadow-2xl">
+            <button onclick="abrirTest()" class="bg-blue-600 text-white px-16 py-7 rounded-xl font-black text-2xl hover:bg-blue-700 transition shadow-2xl">
                 ACCEDER AL PROGRAMA
-            </a>
+            </button>
             <p class="mt-12 text-blue-200 text-lg italic">
                 Incluye Test RAN de estado cognitivo y Protocolo RAN 5™ de aplicación inmediata.
             </p>
@@ -193,6 +227,25 @@
             Desarrollado por el Consejo de Optimización Cognitiva del Programa RAN para profesionales de alta exigencia.
         </p>
     </footer>
+
+    <!-- SCRIPT PARA CONTROLAR EL MODAL -->
+    <script>
+        function abrirTest() {
+            document.getElementById('modal-test').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Evita scroll de fondo
+        }
+        function cerrarTest() {
+            document.getElementById('modal-test').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restaura el scroll
+        }
+        // Cerrar al hacer clic fuera del contenido
+        window.onclick = function(event) {
+            let modal = document.getElementById('modal-test');
+            if (event.target == modal) {
+                cerrarTest();
+            }
+        }
+    </script>
 
 </body>
 </html>
