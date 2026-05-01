@@ -36,6 +36,8 @@
             z-index: -1;
         }
         
+        .section-transparent { background: transparent; }
+
         .btn-primary { 
             background: var(--accent); 
             padding: 16px 32px; 
@@ -60,7 +62,6 @@
             backdrop-filter: blur(12px); 
         }
 
-        /* ESTILOS DEL MODAL PARA EL TEST */
         #modal-test {
             display: none;
             position: fixed;
@@ -108,7 +109,6 @@
 
     <div class="page-overlay"></div>
 
-    <!-- MODAL DEL TEST (Incrustado) -->
     <div id="modal-test">
         <span class="close-modal" onclick="cerrarTest()">&times;</span>
         <div class="modal-content">
@@ -117,18 +117,15 @@
     </div>
 
     <!-- HERO SECTION -->
-    <header class="relative min-h-screen flex items-center justify-center text-center">
+    <header class="relative min-h-screen flex items-center justify-center text-center section-transparent">
         <div class="relative z-10 max-w-5xl px-6">
             <div class="clinical-badge mb-10 mx-auto w-fit">Protocolo de Grado Clínico</div>
-            
             <h1 class="text-4xl md:text-5xl lg:text-6xl mb-12">
                 Entrenamiento en Optimización Cognitiva para <span class="text-blue-500">Perfiles de Alta Exigencia</span>
             </h1>
-            
             <p class="text-xl md:text-2xl text-gray-200 mb-14 max-w-3xl mx-auto leading-loose">
                 El RAN Cognitive Optimization Method® enseña a identificar y regular tu energía mental para operar en tu nivel más alto cuando más importa.
             </p>
-            
             <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <a href="#programa" class="btn-primary w-full sm:w-auto px-12 text-lg">Explorar el Programa</a>
                 <button onclick="abrirTest()" class="btn-primary bg-white/10 border border-white/20 w-full sm:w-auto px-12 text-lg">Realizar Test RAN</button>
@@ -170,7 +167,6 @@
                     Un protocolo técnico diseñado para integrarse en la agenda de profesionales con alta carga decisional.
                 </p>
             </div>
-            
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="card-module">
                     <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 01</div>
@@ -206,9 +202,9 @@
         </div>
     </section>
 
-    <!-- CTA FINAL -->
+    <!-- CTA FINAL - AHORA TRANSPARENTE -->
     <section class="py-36 text-center section-transparent">
-        <div class="max-w-5xl mx-auto px-8 py-20 rounded-3xl bg-blue-600/10 border border-blue-500/20 backdrop-blur-2xl shadow-2xl">
+        <div class="max-w-5xl mx-auto px-8 py-20 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-2xl shadow-2xl">
             <h2 class="text-4xl md:text-6xl font-extrabold mb-14 leading-loose">
                 No optimices solo tus decisiones. <br class="hidden md:block"> Optimiza el sistema que las produce.
             </h2>
@@ -221,29 +217,26 @@
         </div>
     </section>
 
-    <footer class="py-20 text-center text-gray-500 text-sm border-t border-white/10">
-        <p class="uppercase tracking-[0.4em] mb-6 font-bold">Método RAN © 2026</p>
-        <p class="opacity-70 max-w-md mx-auto leading-loose">
-            Desarrollado por el Consejo de Optimización Cognitiva del Programa RAN para profesionales de alta exigencia.
+    <!-- FOOTER ACTUALIZADO -->
+    <footer class="py-20 text-center text-gray-500 text-sm border-t border-white/10 section-transparent">
+        <p class="uppercase tracking-[0.4em] mb-4 font-bold">© 2026 Programa R.A.N. | Optimización Cognitiva de Grado Clínico</p>
+        <p class="opacity-70 max-w-2xl mx-auto leading-loose">
+            Desarrollado por la Unidad de Neurofisiología Aplicada para perfiles de alta exigencia decisional.
         </p>
     </footer>
 
-    <!-- SCRIPT PARA CONTROLAR EL MODAL -->
     <script>
         function abrirTest() {
             document.getElementById('modal-test').style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Evita scroll de fondo
+            document.body.style.overflow = 'hidden';
         }
         function cerrarTest() {
             document.getElementById('modal-test').style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restaura el scroll
+            document.body.style.overflow = 'auto';
         }
-        // Cerrar al hacer clic fuera del contenido
         window.onclick = function(event) {
             let modal = document.getElementById('modal-test');
-            if (event.target == modal) {
-                cerrarTest();
-            }
+            if (event.target == modal) { cerrarTest(); }
         }
     </script>
 
