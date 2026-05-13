@@ -1,247 +1,1676 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- saved from url=(0045)file:///C:/Users/crv_a/Downloads/index_3.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Programa RAN Optimización Cognitiva | Formación de Alto Rendimiento</title>
-    <meta name="description" content="6 módulos para regular tu energía mental, eliminar la saturación cognitiva y tomar decisiones de mayor calidad. Diseñado para médicos, ejecutivos y traders.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método RAN® — Cognitive Optimization Method</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Método RAN® — Cognitive Optimization Method_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --cyan: #00C8E8;
+    --cyan-dim: rgba(0,200,232,0.12);
+    --cyan-glow: rgba(0,200,232,0.35);
+    --dark: #050A12;
+    --dark-2: #0A1220;
+    --dark-3: #0F1A2E;
+    --dark-card: rgba(10,18,32,0.85);
+    --text: #E8EEF5;
+    --text-muted: #6B7E99;
+    --text-dim: #3A4E66;
+    --red-pain: #E84040;
+    --amber: #F5A623;
+    --green-ok: #22C55E;
+    --border: rgba(0,200,232,0.15);
+    --border-dim: rgba(255,255,255,0.06);
+    --r-color: #F5A623;
+    --a-color: #E84040;
+    --n-color: #00C8E8;
+  }
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <style>
-        :root { --accent: #2563eb; --bg: #020617; }
-        
-        body { 
-            background: url('background.jpg') no-repeat center center fixed; 
-            background-size: cover;
-            color: white; 
-            font-family: 'Space Grotesk', sans-serif; 
-            scroll-behavior: smooth; 
-        }
-        
-        h1, h2, h3 { 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.6 !important; 
-            letter-spacing: -0.02em; 
-            font-weight: 800;
-        }
+  html { scroll-behavior: smooth; }
 
-        .page-overlay {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(2, 6, 23, 0.7);
-            z-index: -1;
-        }
-        
-        .section-transparent { background-color: transparent !important; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
 
-        .btn-primary { 
-            background: var(--accent); 
-            padding: 16px 32px; 
-            border-radius: 8px; 
-            font-weight: 700; 
-            transition: 0.3s; 
-            display: inline-block; 
-            text-align: center; 
-            cursor: pointer;
-            border: 1px solid transparent;
-        }
-        .btn-primary:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 10px 20px rgba(37,99,235,0.4); 
-            filter: brightness(1.1);
-        }
-        
-        .card-module { 
-            background: rgba(255, 255, 255, 0.05); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            padding: 40px; 
-            border-radius: 16px; 
-            transition: 0.3s; 
-            backdrop-filter: blur(12px); 
-        }
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
 
-        #modal-test {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 100;
-            backdrop-filter: blur(15px);
-        }
-        .modal-content {
-            position: relative;
-            width: 90%;
-            max-width: 1000px;
-            height: 85vh;
-            margin: 5vh auto;
-            background: #020617;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-            overflow: hidden;
-        }
-        .close-modal {
-            position: absolute;
-            top: 20px; right: 20px;
-            color: white;
-            font-size: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 110;
-        }
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(5,10,18,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-dim);
+  }
 
-        .clinical-badge { 
-            background: rgba(37, 99, 235, 0.2); 
-            border: 1px solid rgba(37, 99, 235, 0.4); 
-            color: #60a5fa; 
-            padding: 6px 16px; 
-            border-radius: 20px; 
-            font-size: 0.85rem; 
-            font-weight: 600; 
-            text-transform: uppercase; 
-            letter-spacing: 0.1em; 
-        }
-    </style>
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-logo-icon {
+    width: 36px; height: 36px;
+    background: var(--cyan-dim);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--cyan);
+    letter-spacing: -0.5px;
+  }
+
+  .nav-logo-text {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+    letter-spacing: 0.5px;
+  }
+
+  .nav-logo-sub {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    line-height: 1;
+    margin-top: 1px;
+  }
+
+  .nav-cta {
+    background: var(--cyan);
+    color: var(--dark);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: opacity 0.2s;
+  }
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 5rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,200,232,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 80% 80%, rgba(232,64,64,0.06) 0%, transparent 60%),
+      var(--dark);
+    z-index: 0;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,200,232,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,200,232,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 0%, transparent 100%);
+    z-index: 0;
+  }
+
+  .hero-content { position: relative; z-index: 1; max-width: 820px; }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(232,64,64,0.1);
+    border: 1px solid rgba(232,64,64,0.3);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FF7070;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .hero-tag::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #E84040;
+    animation: pulse 2s ease infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+
+  .hero-h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+    animation: fadeDown 0.8s 0.1s ease both;
+  }
+
+  .hero-h1 em {
+    font-style: normal;
+    color: var(--cyan);
+  }
+
+  .hero-h1 .pain {
+    color: var(--red-pain);
+    position: relative;
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: var(--text-muted);
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+    font-weight: 300;
+    animation: fadeDown 0.8s 0.2s ease both;
+  }
+
+  .hero-sub strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    animation: fadeDown 0.8s 0.3s ease both;
+  }
+
+  .btn-primary {
+    background: var(--cyan);
+    color: var(--dark);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: all 0.2s;
+    box-shadow: 0 0 30px var(--cyan-glow);
+    border: none; cursor: pointer;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 50px var(--cyan-glow);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid var(--border-dim);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .btn-secondary:hover {
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeDown 0.8s 0.4s ease both;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .stat-n {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--cyan);
+    line-height: 1;
+  }
+
+  .stat-l {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .stat-sep {
+    width: 1px;
+    height: 40px;
+    background: var(--border-dim);
+    align-self: center;
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── PAIN SECTION ── */
+  .pain-section {
+    position: relative;
+    padding: 6rem 2rem;
+    background: var(--dark-2);
+    border-top: 1px solid var(--border-dim);
+    border-bottom: 1px solid var(--border-dim);
+  }
+
+  .container { max-width: 960px; margin: 0 auto; }
+  .container-sm { max-width: 720px; margin: 0 auto; }
+
+  .section-tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .section-h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+  }
+
+  .section-h2 em {
+    font-style: normal;
+    color: var(--cyan);
+  }
+
+  .pain-intro {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    line-height: 1.75;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .pain-card {
+    background: var(--dark-card);
+    border: 1px solid rgba(232,64,64,0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .pain-card:hover { border-color: rgba(232,64,64,0.35); }
+
+  .pain-icon {
+    width: 40px; height: 40px; flex-shrink: 0;
+    background: rgba(232,64,64,0.1);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+
+  .pain-card-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+
+  .pain-card-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .pain-quote {
+    margin-top: 3rem;
+    padding: 2rem 2.5rem;
+    border-left: 3px solid var(--cyan);
+    background: var(--cyan-dim);
+    border-radius: 0 12px 12px 0;
+  }
+
+  .pain-quote-text {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .pain-quote-author {
+    font-size: 0.85rem;
+    color: var(--cyan);
+    font-weight: 500;
+  }
+
+  .pain-quote-role {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  /* ── METHOD SECTION ── */
+  .method-section {
+    padding: 7rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .method-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(0,200,232,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .method-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .ran-letters {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+    flex-wrap: wrap;
+  }
+
+  .ran-card {
+    background: var(--dark-card);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    width: 220px;
+    border: 1px solid var(--border-dim);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  .ran-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .ran-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .ran-card.r::before { background: var(--r-color); }
+  .ran-card.a::before { background: var(--a-color); }
+  .ran-card.n::before { background: var(--n-color); }
+
+  .ran-card:hover.r { border-color: rgba(245,166,35,0.3); }
+  .ran-card:hover.a { border-color: rgba(232,64,64,0.3); }
+  .ran-card:hover.n { border-color: rgba(0,200,232,0.3); }
+
+  .ran-letter {
+    font-family: 'Syne', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .ran-card.r .ran-letter { color: var(--r-color); }
+  .ran-card.a .ran-letter { color: var(--a-color); }
+  .ran-card.n .ran-letter { color: var(--n-color); }
+
+  .ran-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ran-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  /* ── WHAT YOU'LL LEARN ── */
+  .learn-section {
+    padding: 6rem 2rem;
+    background: var(--dark-2);
+    border-top: 1px solid var(--border-dim);
+  }
+
+  .learn-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .learn-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 1.2rem;
+    background: var(--dark-card);
+    border: 1px solid var(--border-dim);
+    border-radius: 10px;
+    transition: border-color 0.2s;
+  }
+  .learn-item:hover { border-color: var(--border); }
+
+  .learn-check {
+    width: 22px; height: 22px; flex-shrink: 0;
+    background: rgba(34,197,94,0.1);
+    border: 1px solid rgba(34,197,94,0.3);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    color: var(--green-ok);
+    margin-top: 1px;
+  }
+
+  .learn-text {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  /* ── AUTHORITY ── */
+  .authority-section {
+    padding: 6rem 2rem;
+    position: relative;
+  }
+
+  .authority-card {
+    background: var(--dark-3);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    .authority-card { grid-template-columns: 1fr; gap: 2rem; }
+  }
+
+  .authority-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 0.5rem;
+  }
+
+  .authority-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .authority-title {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .authority-bio {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  .authority-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .auth-stat {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    background: var(--dark-card);
+    border: 1px solid var(--border-dim);
+    border-radius: 10px;
+  }
+
+  .auth-stat-n {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--cyan);
+    line-height: 1;
+    min-width: 60px;
+  }
+
+  .auth-stat-l {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* ── PRICE SECTION ── */
+  .price-section {
+    padding: 7rem 2rem;
+    background: var(--dark-2);
+    border-top: 1px solid var(--border-dim);
+    text-align: center;
+  }
+
+  .price-card {
+    max-width: 480px;
+    margin: 2.5rem auto 0;
+    background: var(--dark-3);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .price-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cyan), #0080FF);
+  }
+
+  .price-badge {
+    display: inline-block;
+    background: rgba(245,166,35,0.15);
+    border: 1px solid rgba(245,166,35,0.3);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--amber);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .price-label {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+
+  .price-main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+
+  .price-currency {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 8px;
+  }
+
+  .price-amount {
+    font-family: 'Syne', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--cyan);
+    line-height: 1;
+  }
+
+  .price-period {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .price-includes {
+    text-align: left;
+    border-top: 1px solid var(--border-dim);
+    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .price-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+
+  .price-line-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    flex-shrink: 0;
+  }
+
+  .price-guarantee {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* ── TEST RAN ── */
+  .test-section {
+    padding: 7rem 2rem;
+    background: var(--dark-3);
+    border-top: 1px solid var(--border-dim);
+    border-bottom: 1px solid var(--border-dim);
+  }
+
+  .test-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .test-card {
+    background: var(--dark-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 2.5rem;
+  }
+
+  .test-card::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, var(--r-color), var(--a-color), var(--n-color));
+  }
+
+  .test-header {
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-dim);
+  }
+
+  .test-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .test-meta-item {
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .test-progress-bar {
+    height: 3px;
+    background: var(--border-dim);
+    margin: 0 2rem;
+  }
+
+  .test-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cyan), #0080FF);
+    width: 0%;
+    transition: width 0.4s ease;
+    border-radius: 2px;
+  }
+
+  .test-body {
+    padding: 2rem;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .test-section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .test-section-label .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+
+  .test-q-number {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
+  }
+
+  .test-question {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  .test-scale {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .scale-btn {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border-dim);
+    background: transparent;
+    color: var(--text-muted);
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .scale-btn:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    background: var(--cyan-dim);
+  }
+  .scale-btn.selected {
+    border-color: var(--cyan);
+    background: var(--cyan);
+    color: var(--dark);
+  }
+
+  .scale-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4px;
+    margin-bottom: 1.5rem;
+  }
+
+  .scale-label-text {
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+
+  .test-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-dim);
+  }
+
+  .test-btn-back {
+    background: transparent;
+    border: 1px solid var(--border-dim);
+    color: var(--text-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .test-btn-back:hover { border-color: var(--border); color: var(--text); }
+  .test-btn-back:disabled { opacity: 0.3; cursor: default; }
+
+  .test-btn-next {
+    background: var(--cyan);
+    border: none;
+    color: var(--dark);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .test-btn-next.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .test-btn-next.active:hover { opacity: 0.85; }
+
+  /* Result */
+  .test-result {
+    padding: 2rem;
+    text-align: center;
+    display: none;
+  }
+
+  .result-state {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .result-score {
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-family: 'Syne', sans-serif;
+    line-height: 1;
+    margin: 0.5rem 0;
+  }
+
+  .result-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 420px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.7;
+  }
+
+  .result-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    text-align: left;
+  }
+
+  .result-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .result-bar-label {
+    font-size: 12px;
+    font-weight: 500;
+    width: 110px;
+    flex-shrink: 0;
+    color: var(--text-muted);
+  }
+
+  .result-bar-track {
+    flex: 1;
+    height: 8px;
+    background: var(--border-dim);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .result-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    width: 0%;
+    transition: width 1s ease 0.3s;
+  }
+
+  .result-bar-score {
+    font-size: 12px;
+    font-weight: 600;
+    width: 40px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .result-cta {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-dim);
+  }
+
+  .result-restart {
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 0.75rem;
+    text-decoration: underline;
+  }
+  .result-restart:hover { color: var(--text-muted); }
+
+  /* ── FAQ ── */
+  .faq-section {
+    padding: 6rem 2rem;
+  }
+
+  .faq-list {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  details {
+    background: var(--dark-card);
+    border: 1px solid var(--border-dim);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  details[open] { border-color: var(--border); }
+
+  summary {
+    padding: 1.2rem 1.5rem;
+    font-family: 'Syne', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    color: var(--text);
+  }
+  summary::-webkit-details-marker { display: none; }
+
+  summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    color: var(--cyan);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+
+  .faq-answer {
+    padding: 0 1.5rem 1.2rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    border-top: 1px solid var(--border-dim);
+    padding-top: 1rem;
+  }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    padding: 8rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 800px; height: 400px;
+    background: radial-gradient(ellipse, rgba(0,200,232,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .final-h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .final-h2 em {
+    font-style: normal;
+    color: var(--cyan);
+  }
+
+  .final-sub {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin: 0 auto 2.5rem;
+    font-weight: 300;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border-dim);
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  /* ── SCROLL ANIMATIONS ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 640px) {
+    nav { padding: 1rem; }
+    .hero { padding: 7rem 1.5rem 4rem; }
+    .hero-stats { gap: 1rem; }
+    .ran-letters { gap: 0.75rem; }
+    .ran-card { width: 140px; padding: 1.2rem 1rem; }
+    .ran-letter { font-size: 2.5rem; }
+    .price-amount { font-size: 3.5rem; }
+    .authority-card { padding: 2rem 1.5rem; }
+  }
+</style>
 </head>
 <body>
 
-    <div class="page-overlay"></div>
-
-    <!-- MODAL TEST -->
-    <div id="modal-test">
-        <span class="close-modal" onclick="cerrarTest()">&times;</span>
-        <div class="modal-content">
-            <iframe src="https://crvzar1740.github.io/TEST-R.A.N.-/" width="100%" height="100%" frameborder="0"></iframe>
-        </div>
+<!-- NAV -->
+<nav>
+  <a href="file:///C:/Users/crv_a/Downloads/index_3.html#" class="nav-logo">
+    <div class="nav-logo-icon">RAN</div>
+    <div>
+      <span class="nav-logo-text">Método RAN®</span>
+      <span class="nav-logo-sub">Cognitive Optimization</span>
     </div>
+  </a>
+  <a href="file:///C:/Users/crv_a/Downloads/index_3.html#precio" class="nav-cta">Comenzar →</a>
+</nav>
 
-    <!-- HERO -->
-    <header class="relative min-h-screen flex items-center justify-center text-center section-transparent">
-        <div class="relative z-10 max-w-5xl px-6">
-            <div class="clinical-badge mb-10 mx-auto w-fit">Protocolo de Grado Clínico</div>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl mb-12">
-                Entrenamiento en Optimización Cognitiva para <span class="text-blue-500">Perfiles de Alta Exigencia</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-200 mb-14 max-w-3xl mx-auto leading-loose">
-                El RAN Cognitive Optimization Method® enseña a identificar y regular tu energía mental para operar en tu nivel más alto cuando más importa.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a href="#programa" class="btn-primary w-full sm:w-auto px-12 text-lg">Explorar el Programa</a>
-                <button onclick="abrirTest()" class="btn-primary w-full sm:w-auto px-12 text-lg">Realizar Test RAN</button>
-            </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Programa de optimización cognitiva</div>
+    <h1 class="hero-h1">
+      Tu mente toma <span class="pain">peores decisiones</span><br>
+      a medida que avanza el día.<br>
+      <em>Eso tiene solución.</em>
+    </h1>
+    <p class="hero-sub">
+      El <strong>Método RAN®</strong> es un sistema de 3 fases para regular tu energía mental y recuperar la claridad que necesitás cuando más importa — no cuando ya descansaste.
+    </p>
+    <div class="hero-video reveal" style="margin-bottom:2rem; position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px; border:1px solid var(--border); box-shadow: 0 0 60px rgba(0,200,232,0.1); max-width:760px; margin-left:auto; margin-right:auto;">
+      <!-- REEMPLAZÁ "TU_VIDEO_ID" por el ID de YouTube -->
+      <iframe src="./Método RAN® — Cognitive Optimization Method_files/TU_VIDEO_ID.html" title="¿Tu mente ya no da más? — Método RAN®" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+      </iframe>
+    </div>
+    <div class="hero-actions">
+      <a href="file:///C:/Users/crv_a/Downloads/index_3.html#test-ran" class="btn-primary">Hacer el Test RAN gratis →</a>
+      <a href="file:///C:/Users/crv_a/Downloads/index_3.html#precio" class="btn-secondary">Ver el programa</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-n">3</span>
+        <span class="stat-l">Fases fisiológicas</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-n">30+</span>
+        <span class="stat-l">Años de experiencia médica</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-n">2</span>
+        <span class="stat-l">Módulos disponibles ya</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">El problema real</span>
+      <h2 class="section-h2">¿Te reconocés en <em>alguno de estos</em> patrones?</h2>
+      <p class="pain-intro">No es falta de inteligencia ni de voluntad. Es tu cerebro funcionando bajo un fenómeno documentado: la <strong>Fatiga Decisional</strong>.</p>
+    </div>
+    <div class="pain-grid reveal">
+      <div class="pain-card">
+        <div class="pain-icon">🧠</div>
+        <div>
+          <div class="pain-card-title">La mente no para</div>
+          <div class="pain-card-desc">Terminás el día agotado sin haber hecho esfuerzo físico. Solo pensaste. Y eso drena más que correr.</div>
         </div>
-    </header>
-
-    <!-- AUTORIDAD -->
-    <section class="py-28 section-transparent">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="border-l-4 border-blue-600 pl-10">
-                <h2 class="text-3xl md:text-4xl font-bold mb-10 italic leading-relaxed text-gray-100">
-                    "La calidad de tus resultados depende de la calidad de tu estado fisiológico, no solo de tu conocimiento."
-                </h2>
-                <p class="text-blue-400 font-bold text-xl">Dr: C.V. Zamüner</p>
-                <p class="text-gray-400 text-base mt-1 uppercase tracking-widest font-medium">Lead Developer del Programa R.A.N.</p>
-                <p class="text-gray-500 text-sm mt-4">Médico Especialista con +30 años de trayectoria.</p>
-            </div>
-            <div class="grid grid-cols-2 gap-8">
-                <div class="p-10 bg-white/5 rounded-2xl border border-white/5 text-center backdrop-blur-sm shadow-2xl">
-                    <span class="block text-5xl font-bold text-blue-500 mb-2">30+</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-widest font-bold">Años de Exp. Médica</span>
-                </div>
-                <div class="p-10 bg-white/5 rounded-2xl border border-white/5 text-center backdrop-blur-sm shadow-2xl">
-                    <span class="block text-5xl font-bold text-blue-500 mb-2">3</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-widest font-bold">Fases Fisiológicas</span>
-                </div>
-            </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">⚡</div>
+        <div>
+          <div class="pain-card-title">Decisiones apresuradas</div>
+          <div class="pain-card-desc">A las 4 de la tarde aceptás lo primero que aparece, no lo mejor. Ya no tenés energía para evaluar bien.</div>
         </div>
-    </section>
-
-    <!-- ESTRUCTURA DEL PROGRAMA -->
-    <section id="programa" class="py-32 section-transparent">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-24">
-                <h2 class="text-4xl md:text-5xl font-bold mb-10">Estructura del Programa: 6 Módulos</h2>
-                <div class="h-2 w-32 bg-blue-600 mx-auto mb-10 rounded-full"></div>
-                <p class="text-gray-200 max-w-3xl mx-auto text-xl leading-loose">
-                    Un protocolo técnico diseñado para integrarse en la agenda de profesionales con alta carga decisional.
-                </p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="card-module">
-                    <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 01</div>
-                    <h3 class="text-2xl font-bold mb-5">El Problema Invisible</h3>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Fisiología de la fatiga decisional y los mecanismos que producen errores técnicos.</p>
-                </div>
-                <div class="card-module">
-                    <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 02</div>
-                    <h3 class="text-2xl font-bold mb-5">Escala RAN de Claridad</h3>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Evaluación del estado cognitivo en tiempo real para relacionarlo con la calidad decisional.</p>
-                </div>
-                <div class="card-module">
-                    <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 03</div>
-                    <h3 class="text-2xl font-bold mb-5">Modelo R.A.N.</h3>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Las tres fases estratégicas: Regeneración, Activación y Normalización.</p>
-                </div>
-                <div class="card-module">
-                    <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 04</div>
-                    <h3 class="text-2xl font-bold mb-5">Protocolo RAN 5™</h3>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Técnicas para recuperar energía cognitiva en menos de 5 minutos.</p>
-                </div>
-                <div class="card-module">
-                    <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 05</div>
-                    <h3 class="text-2xl font-bold mb-5">Decisiones Óptimas</h3>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Gestión del sesgo cognitivo y diseño de bloques de claridad bajo presión máxima.</p>
-                </div>
-                <div class="card-module">
-                    <div class="text-blue-400 font-bold mb-6 text-sm uppercase tracking-[0.25em]">Módulo 06</div>
-                    <h3 class="text-2xl font-bold mb-5">Método RAN 10™</h3>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">Rutina diaria de 10 minutos para consolidar hábitos de claridad sostenibles.</p>
-                </div>
-            </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🔄</div>
+        <div>
+          <div class="pain-card-title">Ciclo de postergación</div>
+          <div class="pain-card-desc">Las decisiones importantes se acumulan. Sabés que tenés que tomarlas pero seguís posponiendo.</div>
         </div>
-    </section>
-
-    <!-- CTA FINAL - SIN CAJAS, MÁXIMA TRANSPARENCIA -->
-    <section class="py-36 text-center section-transparent">
-        <div class="max-w-5xl mx-auto px-8 py-20">
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-14 leading-loose drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]">
-                No optimices solo tus decisiones. <br class="hidden md:block"> Optimiza el sistema que las produce.
-            </h2>
-            <button onclick="abrirTest()" class="btn-primary px-16 py-7 rounded-xl font-black text-2xl shadow-2xl">
-                ACCEDER AL PROGRAMA
-            </button>
-            <p class="mt-12 text-blue-200 text-lg italic drop-shadow-md">
-                Incluye Test RAN de estado cognitivo y Protocolo RAN 5™ de aplicación inmediata.
-            </p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">😤</div>
+        <div>
+          <div class="pain-card-title">Irritabilidad sin causa</div>
+          <div class="pain-card-desc">Reaccionás de más a cosas menores. No es tu carácter — es tu corteza prefrontal saturada.</div>
         </div>
-    </section>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🌀</div>
+        <div>
+          <div class="pain-card-title">Ruido mental constante</div>
+          <div class="pain-card-desc">No podés "apagar" el cerebro. Incluso en momentos de descanso seguís procesando, preocupándote, analizando.</div>
+        </div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">📉</div>
+        <div>
+          <div class="pain-card-title">Rendimiento en caída</div>
+          <div class="pain-card-desc">Sos el mismo profesional de siempre, pero tus resultados ya no reflejan tu capacidad real. El problema no es tu habilidad.</div>
+        </div>
+      </div>
+    </div>
+    <div class="pain-quote reveal">
+      <p class="pain-quote-text">"Investigaciones en neurociencia demuestran que el juicio se deteriora progresivamente a medida que aumenta la carga decisional del día. No es un problema de motivación. Es fisiología."</p>
+      <div class="pain-quote-author">Dr. C.V. Zamüner</div>
+      <div class="pain-quote-role">Lead Developer — Método RAN® · Médico Especialista</div>
+    </div>
+  </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer class="py-20 text-center text-gray-500 text-sm border-t border-white/10 section-transparent">
-        <p class="uppercase tracking-[0.4em] mb-4 font-bold">© 2026 Programa R.A.N. | Optimización Cognitiva de Grado Clínico</p>
-        <p class="opacity-70 max-w-2xl mx-auto leading-loose">
-            Desarrollado por la Unidad de Neurofisiología Aplicada para perfiles de alta exigencia decisional.
-        </p>
-    </footer>
+<!-- METHOD -->
+<section class="method-section" id="metodo">
+  <div class="container">
+    <div class="method-header reveal">
+      <span class="section-tag">El modelo</span>
+      <h2 class="section-h2" style="text-align:center">El sistema <em>R · A · N</em></h2>
+      <p style="text-align:center; color:var(--text-muted); max-width:520px; margin:0 auto; font-weight:300;">Tres fases fisiológicas para alcanzar y sostener el estado cognitivo óptimo bajo presión.</p>
+    </div>
+    <div class="ran-letters reveal">
+      <div class="ran-card r">
+        <div class="ran-letter">R</div>
+        <div class="ran-name">Regeneración</div>
+        <div class="ran-desc">Recuperar la energía mental gastada. Reducir el cortisol acumulado. Preparar el sistema nervioso para volver a operar en modo óptimo.</div>
+      </div>
+      <div class="ran-card a">
+        <div class="ran-letter">A</div>
+        <div class="ran-name">Activación</div>
+        <div class="ran-desc">Activar las vías neurológicas de la toma de decisiones. Llevar la atención al estado de alerta óptimo — ni sobreactivado ni letárgico.</div>
+      </div>
+      <div class="ran-card n">
+        <div class="ran-letter">N</div>
+        <div class="ran-name">Normalización</div>
+        <div class="ran-desc">Estabilizar el funcionamiento mental para sostenerlo en el tiempo. Crear una rutina que no dependa de la fuerza de voluntad.</div>
+      </div>
+    </div>
+    <div class="reveal" style="text-align:center; margin-top:2.5rem;">
+      <p style="color:var(--text-muted); font-size:0.9rem; max-width:560px; margin:0 auto; line-height:1.75;">
+        Este enfoque comparte fundamentos con el <strong style="color:var(--text)">estado de flujo</strong> descrito por Csikszentmihalyi y los estudios de <strong style="color:var(--text)">Decision Fatigue</strong> de Baumeister — adaptados a un protocolo clínico aplicable en el mundo real.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <script>
-        function abrirTest() {
-            document.getElementById('modal-test').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-        function cerrarTest() {
-            document.getElementById('modal-test').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-        window.onclick = function(event) {
-            let modal = document.getElementById('modal-test');
-            if (event.target == modal) { cerrarTest(); }
-        }
-    </script>
+<!-- WHAT YOU LEARN -->
+<section class="learn-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">Qué vas a aprender</span>
+      <h2 class="section-h2">Herramientas concretas,<br><em>no teoría vacía</em></h2>
+    </div>
+    <div class="learn-grid reveal">
+      <div class="learn-item">
+        <div class="learn-check">✓</div>
+        <div class="learn-text">Identificar en qué punto del día tu claridad mental colapsa — y por qué</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-check">✓</div>
+        <div class="learn-text">Regular tu energía cognitiva para que dure todo el día laboral</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-check">✓</div>
+        <div class="learn-text">Aplicar el protocolo RAN antes de decisiones críticas</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-check">✓</div>
+        <div class="learn-text">Reconocer el estado cognitivo óptimo y cómo acceder a él intencionalmente</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-check">✓</div>
+        <div class="learn-text">Construir una rutina diaria de optimización mental sostenible</div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-check">✓</div>
+        <div class="learn-text">Diferenciar saturación cognitiva de cansancio físico — y tratarlas diferente</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-</body>
-</html>
+<!-- AUTHORITY -->
+<section class="authority-section">
+  <div class="container">
+    <div class="reveal">
+      <div class="authority-card">
+        <div>
+          <div class="authority-label">Desarrollado por</div>
+          <h3 class="authority-name">Dr. C.V. Zamüner</h3>
+          <div class="authority-title">Médico Especialista · Lead Developer, Método RAN®</div>
+          <p class="authority-bio">
+            Con más de tres décadas de práctica clínica, el Dr. Zamüner observó un patrón consistente en sus pacientes: el deterioro en la calidad de sus decisiones no era un problema de carácter ni de inteligencia. Era un problema fisiológico con solución sistemática.<br><br>
+            El Método RAN® nace de esa observación clínica, estructurada como un protocolo aplicable fuera del consultorio.
+          </p>
+        </div>
+        <div class="authority-stats">
+          <div class="auth-stat">
+            <div class="auth-stat-n">30+</div>
+            <div class="auth-stat-l">Años de experiencia<br>médica clínica</div>
+          </div>
+          <div class="auth-stat">
+            <div class="auth-stat-n">3</div>
+            <div class="auth-stat-l">Fases fisiológicas<br>del protocolo</div>
+          </div>
+          <div class="auth-stat">
+            <div class="auth-stat-n">1</div>
+            <div class="auth-stat-l">Método aplicable<br>desde el día 1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="price-section" id="precio">
+  <div class="container-sm">
+    <div class="reveal">
+      <span class="section-tag">Acceso al programa</span>
+      <h2 class="section-h2">Comenzá hoy.<br><em>Precio de lanzamiento.</em></h2>
+      <p style="color:var(--text-muted); margin-top:0.5rem; font-weight:300;">El programa se está lanzando en acceso anticipado. Los módulos se publican progresivamente — accedés a todo lo disponible ahora y al resto a medida que se libera.</p>
+    </div>
+    <div class="price-card reveal">
+      <div class="price-badge">🔓 Acceso anticipado</div>
+      <div class="price-label">Precio regular USD $67</div>
+      <div class="price-main">
+        <span class="price-currency">USD</span>
+        <span class="price-amount">27</span>
+      </div>
+      <div class="price-period">Pago único · Acceso de por vida</div>
+      <div class="price-includes">
+        <div class="price-line"><div class="price-line-dot"></div>Módulo I: El Cambio de Paradigma (disponible ahora)</div>
+        <div class="price-line"><div class="price-line-dot"></div>Módulo II: El Sistema RAN (disponible ahora)</div>
+        <div class="price-line"><div class="price-line-dot"></div>Módulos III, IV y V (en desarrollo — incluidos)</div>
+        <div class="price-line"><div class="price-line-dot"></div>Acceso al Test RAN de diagnóstico cognitivo</div>
+        <div class="price-line"><div class="price-line-dot"></div>Actualizaciones del programa sin costo adicional</div>
+      </div>
+      <a href="file:///C:/Users/crv_a/Downloads/index_3.html#" class="btn-primary" style="display:block; text-align:center; width:100%; font-size:16px; padding:16px;">
+        Quiero acceso ahora →
+      </a>
+      <div class="price-guarantee">
+        🔒 Plataforma segura · Acceso inmediato tras el pago
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEST RAN -->
+<section class="test-section" id="test-ran">
+  <div class="test-wrapper">
+    <div class="reveal" style="text-align:center;">
+      <span class="section-tag">Diagnóstico gratuito</span>
+      <h2 class="section-h2" style="text-align:center;">Test RAN®<br><em>¿En qué estado está tu mente ahora?</em></h2>
+      <p style="color:var(--text-muted); font-weight:300; max-width:480px; margin:0 auto;">15 preguntas · 3 dominios · Resultado inmediato. Evaluá tu nivel actual de Regeneración, Activación y Normalización.</p>
+    </div>
+    <div class="test-card reveal">
+      <div class="test-progress-bar"><div class="test-progress-fill" id="progressFill" style="width: 0%;"></div></div>
+      <div class="test-header" id="testHeader">
+        <div style="font-family:&#39;Syne&#39;,sans-serif; font-size:1rem; font-weight:600; color:var(--text);">RAN Cognitive State Test®</div>
+        <div class="test-meta">
+          <span class="test-meta-item">⏱ 2–3 minutos</span>
+          <span class="test-meta-item">· 15 preguntas</span>
+          <span class="test-meta-item">· Escala 1 al 5</span>
+        </div>
+        <div style="font-size:12px; color:var(--text-dim); margin-top:0.5rem;">Pregunta <span id="qNum">1</span> de 15</div>
+      </div>
+      <div class="test-body" id="testBody">
+        <div class="test-section-label" id="sectionLabel">
+          <span class="dot" id="sectionDot" style="background:var(--r-color)"></span>
+          <span id="sectionName">Sección 1 — Regeneración</span>
+        </div>
+        <div class="test-q-number" id="qNumber">Pregunta 1 de 15</div>
+        <div class="test-question" id="questionText">Me despierto con sensación de energía suficiente para iniciar el día.</div>
+        <div class="test-scale" id="scaleButtons">
+          <button class="scale-btn" onclick="selectAnswer(1)">1</button>
+          <button class="scale-btn" onclick="selectAnswer(2)">2</button>
+          <button class="scale-btn" onclick="selectAnswer(3)">3</button>
+          <button class="scale-btn" onclick="selectAnswer(4)">4</button>
+          <button class="scale-btn" onclick="selectAnswer(5)">5</button>
+        </div>
+        <div class="scale-labels">
+          <span class="scale-label-text">Muy bajo</span>
+          <span class="scale-label-text">Muy alto</span>
+        </div>
+        <div class="test-nav">
+          <button class="test-btn-back" id="btnBack" onclick="prevQuestion()" disabled="">← Anterior</button>
+          <button class="test-btn-next" id="btnNext" onclick="nextQuestion()">Siguiente →</button>
+        </div>
+      </div>
+      <div class="test-result" id="testResult">
+        <div id="resultEmoji" style="font-size:3rem; margin-bottom:0.5rem;">🧠</div>
+        <div style="font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.5rem;">Tu estado cognitivo actual</div>
+        <div class="result-state" id="resultState">—</div>
+        <div class="result-score" id="resultScore" style="color:var(--cyan);">— / 75</div>
+        <div class="result-desc" id="resultDesc"></div>
+        <div class="result-bars" id="resultBars"></div>
+        <div class="result-cta">
+          <a href="file:///C:/Users/crv_a/Downloads/index_3.html#precio" class="btn-primary" style="display:inline-block;">Conocé el Método RAN completo →</a>
+          <br><button class="result-restart" onclick="restartTest()">↺ Repetir el test</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container-sm">
+    <div class="reveal" style="text-align:center; margin-bottom:1rem;">
+      <span class="section-tag">Preguntas frecuentes</span>
+      <h2 class="section-h2" style="text-align:center">Lo que suelen <em>preguntarse</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>¿Para quién está diseñado el Método RAN?</summary>
+        <div class="faq-answer">Para profesionales con alta carga de decisiones diarias: directores, gerentes, médicos, emprendedores, traders, y cualquier persona que sienta que su claridad mental se deteriora a lo largo del día. No requiere conocimientos previos en neurociencia.</div>
+      </details>
+      <details>
+        <summary>¿El programa está completo?</summary>
+        <div class="faq-answer">El programa está en lanzamiento progresivo. Los Módulos I y II están disponibles inmediatamente. Los módulos restantes se publican en las próximas semanas. Al adquirir el acceso hoy, obtenés todo el contenido actual y los módulos futuros sin costo adicional.</div>
+      </details>
+      <details>
+        <summary>¿Cuánto tiempo requiere por día?</summary>
+        <div class="faq-answer">El protocolo RAN está diseñado para integrarse en tu rutina existente. Los módulos son de aproximadamente 10-13 minutos. La aplicación práctica requiere entre 5 y 15 minutos diarios una vez incorporado.</div>
+      </details>
+      <details>
+        <summary>¿Qué diferencia al Método RAN de técnicas convencionales?</summary>
+        <div class="faq-answer">La mayoría de los enfoques de productividad abordan el problema desde la gestión del tiempo o la motivación. El Método RAN trabaja sobre la variable que los otros ignoran: el estado fisiológico del sistema nervioso en el momento de la decisión. Sin ese estado óptimo, ninguna técnica de organización funciona bien.</div>
+      </details>
+      <details>
+        <summary>¿En qué formato se accede?</summary>
+        <div class="faq-answer">El programa es 100% online, con acceso inmediato tras el pago. Los módulos son en formato video con subtítulos, optimizados para ver en cualquier dispositivo.</div>
+      </details>
+      <details>
+        <summary>¿Qué resultados puedo esperar?</summary>
+        <div class="faq-answer">Los primeros cambios perceptibles suelen aparecer en la primera semana de aplicación del protocolo: mayor claridad en los momentos de alta presión, reducción del ruido mental y menor impulsividad en decisiones bajo estrés. Los resultados a largo plazo dependen de la consistencia de aplicación.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div style="position:relative; z-index:1;">
+    <h2 class="final-h2 reveal">
+      No optimices solo tus decisiones.<br>
+      <em>Optimizá el sistema que las produce.</em>
+    </h2>
+    <p class="final-sub reveal">Tu mente es tu herramienta más poderosa. El Método RAN® te enseña a mantenerla en condiciones óptimas.</p>
+    <div class="reveal">
+      <a href="file:///C:/Users/crv_a/Downloads/index_3.html#precio" class="btn-primary" style="font-size:16px; padding:16px 40px;">
+        Comenzar el programa — USD $27
+      </a>
+      <p style="margin-top:1rem; font-size:0.8rem; color:var(--text-dim);">Precio de lanzamiento · Acceso de por vida · Módulos futuros incluidos</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 RAN Cognitive Optimization Method®. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  // ── TEST RAN LOGIC ──
+  const questions = [
+    // Sección 1 — Regeneración
+    { text: "Me despierto con sensación de energía suficiente para iniciar el día.", section: 0 },
+    { text: "Mi sueño suele ser profundo y reparador.", section: 0 },
+    { text: "Después de jornadas exigentes logro recuperarme adecuadamente.", section: 0 },
+    { text: "Siento que mi nivel de energía se mantiene estable durante el día.", section: 0 },
+    { text: "Puedo descansar mentalmente cuando no estoy trabajando.", section: 0 },
+    // Sección 2 — Activación
+    { text: "Cuando enfrento desafíos puedo activarme rápidamente.", section: 1 },
+    { text: "Mantengo claridad mental bajo presión.", section: 1 },
+    { text: "Tengo motivación suficiente para iniciar tareas exigentes.", section: 1 },
+    { text: "Mi capacidad de concentración es buena.", section: 1 },
+    { text: "Puedo responder con rapidez a situaciones nuevas.", section: 1 },
+    // Sección 3 — Normalización
+    { text: "Después de momentos de estrés puedo volver a un estado de calma.", section: 2 },
+    { text: "Mantengo estabilidad emocional durante el día.", section: 2 },
+    { text: "Mi cuerpo tolera bien períodos de alta demanda.", section: 2 },
+    { text: "No experimento fatiga mental persistente.", section: 2 },
+    { text: "Siento que mi organismo mantiene equilibrio general.", section: 2 },
+  ];
+
+  const sections = [
+    { name: "Sección 1 — Regeneración", color: "var(--r-color)", label: "Regeneración" },
+    { name: "Sección 2 — Activación", color: "var(--a-color)", label: "Activación" },
+    { name: "Sección 3 — Normalización", color: "var(--n-color)", label: "Normalización" },
+  ];
+
+  const results = [
+    { min: 60, label: "Estado RAN", emoji: "⚡", color: "var(--cyan)", desc: "Tu sistema cognitivo opera en condiciones óptimas. Estás en el estado ideal para tomar decisiones complejas con claridad y precisión." },
+    { min: 45, label: "Alta Claridad", emoji: "✨", color: "var(--green-ok)", desc: "Tu rendimiento cognitivo es sólido. Con pequeños ajustes en el protocolo RAN podés alcanzar el estado óptimo consistentemente." },
+    { min: 30, label: "Operativo", emoji: "⚠️", color: "var(--amber)", desc: "Tu sistema funciona pero con limitaciones. Existe riesgo de decisiones subóptimas bajo presión. El Método RAN puede corregir esto." },
+    { min: 0, label: "Fatiga / Saturación", emoji: "🔴", color: "var(--red-pain)", desc: "Tu energía cognitiva está comprometida. Tus decisiones pueden estar siendo afectadas sin que lo percibas. Es el momento de aplicar el protocolo RAN." },
+  ];
+
+  let current = 0;
+  let answers = new Array(15).fill(null);
+  let selectedValue = null;
+
+  function updateQuestion() {
+    const q = questions[current];
+    const sec = sections[q.section];
+    document.getElementById('questionText').textContent = q.text;
+    document.getElementById('sectionName').textContent = sec.name;
+    document.getElementById('sectionDot').style.background = sec.color;
+    document.getElementById('qNum').textContent = current + 1;
+    document.getElementById('qNumber').textContent = `Pregunta ${current + 1} de 15`;
+    document.getElementById('progressFill').style.width = `${((current) / 15) * 100}%`;
+    document.getElementById('btnBack').disabled = current === 0;
+    // Restore selection if answered
+    selectedValue = answers[current];
+    document.querySelectorAll('.scale-btn').forEach((btn, i) => {
+      btn.classList.toggle('selected', i + 1 === selectedValue);
+    });
+    const nextBtn = document.getElementById('btnNext');
+    nextBtn.textContent = current === 14 ? 'Ver resultado →' : 'Siguiente →';
+    nextBtn.classList.toggle('active', selectedValue !== null);
+  }
+
+  function selectAnswer(val) {
+    selectedValue = val;
+    answers[current] = val;
+    document.querySelectorAll('.scale-btn').forEach((btn, i) => {
+      btn.classList.toggle('selected', i + 1 === val);
+    });
+    document.getElementById('btnNext').classList.add('active');
+  }
+
+  function nextQuestion() {
+    if (selectedValue === null) return;
+    if (current === 14) { showResult(); return; }
+    current++;
+    updateQuestion();
+  }
+
+  function prevQuestion() {
+    if (current === 0) return;
+    current--;
+    updateQuestion();
+  }
+
+  function showResult() {
+    const scores = [0, 0, 0];
+    answers.forEach((a, i) => { if (a) scores[questions[i].section] += a; });
+    const total = scores.reduce((s, v) => s + v, 0);
+    const res = results.find(r => total >= r.min);
+
+    document.getElementById('testBody').style.display = 'none';
+    document.getElementById('testHeader').style.display = 'none';
+    document.getElementById('progressFill').style.width = '100%';
+    const resultEl = document.getElementById('testResult');
+    resultEl.style.display = 'block';
+
+    document.getElementById('resultEmoji').textContent = res.emoji;
+    document.getElementById('resultState').textContent = res.label;
+    document.getElementById('resultState').style.color = res.color;
+    document.getElementById('resultScore').textContent = `${total} / 75`;
+    document.getElementById('resultScore').style.color = res.color;
+    document.getElementById('resultDesc').textContent = res.desc;
+
+    // Bars
+    const barsEl = document.getElementById('resultBars');
+    barsEl.innerHTML = sections.map((s, i) => `
+      <div class="result-bar-row">
+        <div class="result-bar-label">${s.label}</div>
+        <div class="result-bar-track">
+          <div class="result-bar-fill" id="bar${i}" style="background:${s.color}"></div>
+        </div>
+        <div class="result-bar-score" style="color:${s.color}">${scores[i]}/25</div>
+      </div>`).join('');
+
+    setTimeout(() => {
+      sections.forEach((_, i) => {
+        document.getElementById(`bar${i}`).style.width = `${(scores[i] / 25) * 100}%`;
+      });
+    }, 100);
+  }
+
+  function restartTest() {
+    current = 0;
+    answers = new Array(15).fill(null);
+    selectedValue = null;
+    document.getElementById('testBody').style.display = 'flex';
+    document.getElementById('testHeader').style.display = 'block';
+    document.getElementById('testResult').style.display = 'none';
+    updateQuestion();
+  }
+
+  updateQuestion();
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+
+</body></html>
